@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function login()
+            {
+                var usr=document.my.t1.value;
+                if(document.my.t1.value=="admin" && document.my.t2.value=="admin")
+                {
+                    alert("welcome admin");
+                    window.location.href="home.html";
+                }    
+                else
+                {
+                     if(document.my.t2.value=="user")
+                     {
+                        alert("new user added "+usr+" to database.");
+                         window.location.href="home.html";
+                 }
+                 else
+                 {
+                     alert("You were not authorized get password from admin");
+                 }
+                }
+            }
+            </script>
+        <style>  
+            body{
+                
+                background-image: url("images/car.jpg");
+                background-size: cover;
+                background-repeat:no-repeat;
+            }
+            marquee{
+                 background-color: rgba(255, 255, 255, 0.1); 
+                color: rgba(255, 255, 255, 0.1);
+            }
+.login {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 310px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;}
+.mar{
+  border-radius: 7px;
+  background-color: #242323;
+  width: 1348px;
+  border: none;
+}
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 10px;
+  padding: 5px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+}
+</style>  
+    </head>
+    <body bgcolor="white">
+        <div class="mar">
+            <h1> <marquee><font color="#d4d4d4">Welcome to Vehicles Investigation Website</font></marquee></h1>
+        </div>
+        <div>
+            <center> <h1><strong><font color="#242323"><u color="white">Vehicles Investigation Web</u></font></strong></h1></center>
+        </div><br><br>
+        <div class="login">
+            <h1><font color="white">Login to Web App</font></h1>
+            <form method="post" action="home.html" name="my"><bR>
+                <input type="text" name="t1" placeholder="Username"><br><br>
+                <input type="password" name="t2"  placeholder="Password"><br><br>
+        <input type="button" value="Login" class="button" onclick="login()">
+      </form>
+        </div>
+    </body>
+</html>
